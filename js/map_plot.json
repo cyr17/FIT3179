@@ -1,80 +1,44 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 550,
-  "height": 350,
-  "title": "The active Covid-19 cases",
-  "projection": {"type": "equalEarth"},
-  "layer": [
+  "title": "Covid-19 statistics as of 30/10/2020",
+  "width": 800,
+  "height": 600,
+  "projection": {"type": "equirectangular"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/js/ne_110m_admin_0_countries.topojson",
+    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+  },
+  "transform": [
     {
-      "data": {
-        "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/js/ne_110m_admin_0_countries.topojson",
-        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
-      },
-      "mark": {"type": "geoshape", "fill": "lightblue", "stroke": "white"}
-    },
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/data_final.csv"
-      },
-      
-      "encoding": {
-        "longitude": {"field": "Long", "type": "quantitative"},
-        "latitude": {"field": "Lat", "type": "quantitative"}
-      },
-      "layer": [
-        {
-          "mark": {"type": "point"},
-          "encoding": {
-            "tooltip": [
-              {"field": "Province/State", "type": "nominal", "title": "State"},
-              {
-                "field": "Country/Region",
-                "type": "nominal",
-                "title": "Country"
-              },
-              {
-                "field": "Confirmed",
-                "type": "quantitative",
-                "title": "Active cases"
-              }
-            ],
-            "size": {
-              "title": "Active Cases",
-              "field": "Confirmed",
-              "type": "quantitative",
-              "scale": {"domain": [1, 1000000]}
-            }
-          }
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/Covid_cleaned_final.csv"
         },
-        {
-          "mark": {
-            "type": "text",
-            "align": "center",
-            "baseline": "middle",
-            "dx": 0,
-            "fontSize": 11.5,
-            "fontStyle": "italic"
-          },
-          "encoding": {
-            "text": {"field": "Country/Region", "type": "nominal"},
-            "color": {"value": "black"},
-            "opacity": {
-              "condition": {
-                "test": "datum['Country/Region'] == 'Brazil' || datum['Country/Region'] == 'India' || datum['Country/Region'] == 'US'",
-                "value": 1
-              },
-              "value": 0
-            },
-            "tooltip": [
-              {"field": "Country/Region", "type": "nominal"},
-              {"field": "Confirmed", "type": "quantitative", "format": ","},
-              {"field": "Active", "type": "quantitative", "format": ","},
-              {"field": "Death", "type": "quantitative", "format": ","}
-            ]
-          }
-        }
-      ]
+        "key": "location",
+        "fields": ["total_cases_per_million","total_deaths"]
+      }
     }
   ],
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "color": {
+      "field": "total_cases_per_million",
+      "title":"Total Cases Per Million",
+      "type": "quantitative",
+      "scale": {
+        "type": "threshold",
+        "domain": [250, 5000,10000],
+        "range": ["#f1eef6","#bdc9e1","#2b8cbe","#045a8d"]
+                }
+    },
+    "tooltip": [
+      {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+      {"field": "total_cases_per_million", "type": "quantitative",
+      "title": "Confirmed/ Million"},
+      {"field": "total_deaths", "type": "quantitative",
+      "title":"Deaths"}
+    ]
+  },
   "config": {}
 }
