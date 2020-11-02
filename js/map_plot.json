@@ -16,13 +16,14 @@
       "data": {
         "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/data_final.csv"
       },
+      
       "encoding": {
         "longitude": {"field": "Long", "type": "quantitative"},
         "latitude": {"field": "Lat", "type": "quantitative"}
       },
       "layer": [
         {
-          "mark": {"type": "circle"},
+          "mark": {"type": "point"},
           "encoding": {
             "tooltip": [
               {"field": "Province/State", "type": "nominal", "title": "State"},
@@ -50,7 +51,7 @@
             "type": "text",
             "align": "center",
             "baseline": "middle",
-            "dx": -12,
+            "dx": 0,
             "fontSize": 11.5,
             "fontStyle": "italic"
           },
