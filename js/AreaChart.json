@@ -1,33 +1,18 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 750,
-  "height": 350,
+  "width": 600,
+  "height": 300,
   "data": {
-    "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/total-covid-deaths-region_cleaned.csv"
+    "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/Area_cleaned.csv"
   },
   "params": [
+    
     {
       "name": "Region_selection",
       "bind": {
         "input": "select",
-        "options": [
-          null,
-          "North America",
-          "South America",
-          "Europe",
-          "Africa",
-          "Asia",
-          "Oceania"
-        ],
-        "labels": [
-          "Show All",
-          "North America",
-          "South America",
-          "Europe",
-          "Africa",
-          "Asia",
-          "Oceania"
-        ],
+        "options": [null, "North America","South America", "Europe", "Africa", "Asia","Oceania"],
+        "labels": ["Show All", "North America","South America", "Europe", "Africa", "Asia","Oceania"],
         "name": "Region Selection: "
       }
     }
@@ -41,61 +26,57 @@
   "mark": "area",
   "encoding": {
     "x": {
-      "timeUnit": "yearmonth",
+       "timeUnit": "month",
       "field": "Date",
-      "title": "Date",
+
       "axis": {
-        "format": "%b %Y",
+        "format": "%b %2020",
         "grid": false,
         "ticks": false,
         "labelFontSize": 12,
-        "titleFontSize": 14
+        "title":null,
+        "domainColor":"white"
       }
     },
     "y": {
       "aggregate": "sum",
       "field": "Count",
-      "type": "quantitative",
-      "title": "Total Cases"
+      "type":"quantitative",
+      "title": "Total Cases",
+      "axis": {"format": ".2s",
+       "labelFontSize": 12,
+        "titleFontSize": 14,
+        "tickCount":4,
+        "ticks":false,
+        "domainColor":"white"}
+      
     },
     "color": {
       "field": "Entity",
-      "scale": {
-        "range": [
-          "#7a7a43",
-          "#524218",
-          "#681740",
-          "#7a1f1a",
-          "#e6d4a3",
-          "#ed8b85"
-        ],
-        "domain": [
-          "North America",
-          "South America",
-          "Europe",
-          "Africa",
-          "Asia",
-          "Oceania"
-        ]
-      },
+      "scale": {"range":["#c7e9b4","#ffffcc","#d1e5f0","#1c9099","#67a9cf","#999999"],
+      "domain":["North America","South America", "Europe", "Africa", "Asia","Oceania"]},
       "legend": {"labelFontSize": 11}
     },
     "opacity": {
       "condition": {"selection": "highlight", "value": 1},
       "value": 0.27
     },
-    "tooltip": [
+    "order": {"field": "Entity"},
+    "tooltip": 
+    [
       {"field": "Entity", "type": "nominal"},
-      {"field": "Count", "type": "quantitative", "title": "Recorded Cases"},
       {
-        "field": "yearmonth_Date",
+        "field": "Count",
+        "type": "quantitative",
+        "title": "Recorded Cases"
+      },
+     {
+        "field": "Date",
         "type": "temporal",
         "format": "%B %Y",
         "title": "Date"
-      },
-      {"field": "Continent", "type": "nominal"},
-      {"field": "Rank", "type": "quantitative"}
+      }
     ]
   },
-  "config": {}
+  "config": {"view": {"stroke": "transparent"}}
 }
