@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A population pyramid for the US in 2000, created using stack. See https://vega.github.io/vega-lite/examples/concat_population_pyramid.html for a variant of this created using concat.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/Pyramid_age_structure_cleaned.csv"
+  },
+  "fields": ["gender", "age", "people"],
+  "transform": [
+    {"calculate": "datum.gender == 'Female' ? 'Female' : 'Male'", "as": "sex"},
+    {
+      "calculate": "datum.gender == 'Female' ? -datum.people : datum.people",
+      "as": "signed_people"
+    }
+  ],
+  "title": "Age-Sex Structure for confirmed cases",
+  "width": 400,
+  "height": 300,
+  "mark": "bar",
+  "encoding": {
+    "y": {"field": "age", "axis": null, "sort": "descending"},
+    "x": {
+      "aggregate": "sum",
+      "field": "signed_people",
+      "title": "Confirmed Population",
+      "axis": {"format": "s"}
+    },
+    "color": {
+      "field": "sex",
+      "scale": {"range": ["#675193", "#ca8861"]},
+      "legend": {"orient": "bottom-right", "title": "Gender"}
+    },
+    "tooltip": [
+      {"field": "age", "type": "nominal"},
+      {"field": "people", "format": ".3s", "title": "Confirmed"}
+    ]
+  },
+  "config": {"view": {"stroke": null}, "axis": {"grid": false}}
+}

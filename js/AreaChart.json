@@ -1,0 +1,101 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 750,
+  "height": 350,
+  "data": {
+    "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/total-covid-deaths-region_cleaned.csv"
+  },
+  "params": [
+    {
+      "name": "Region_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "labels": [
+          "Show All",
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Region Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "Region_selection == null || datum.Entity==Region_selection"}
+  ],
+  "selection": {
+    "highlight": {"type": "multi", "fields": ["Entity"], "bind": "legend"}
+  },
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "timeUnit": "yearmonth",
+      "field": "Date",
+      "title": "Date",
+      "axis": {
+        "format": "%b %Y",
+        "grid": false,
+        "ticks": false,
+        "labelFontSize": 12,
+        "titleFontSize": 14
+      }
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "Count",
+      "type": "quantitative",
+      "title": "Total Cases"
+    },
+    "color": {
+      "field": "Entity",
+      "scale": {
+        "range": [
+          "#7a7a43",
+          "#524218",
+          "#681740",
+          "#7a1f1a",
+          "#e6d4a3",
+          "#ed8b85"
+        ],
+        "domain": [
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ]
+      },
+      "legend": {"labelFontSize": 11}
+    },
+    "opacity": {
+      "condition": {"selection": "highlight", "value": 1},
+      "value": 0.27
+    },
+    "tooltip": [
+      {"field": "Entity", "type": "nominal"},
+      {"field": "Count", "type": "quantitative", "title": "Recorded Cases"},
+      {
+        "field": "yearmonth_Date",
+        "type": "temporal",
+        "format": "%B %Y",
+        "title": "Date"
+      },
+      {"field": "Continent", "type": "nominal"},
+      {"field": "Rank", "type": "quantitative"}
+    ]
+  },
+  "config": {}
+}

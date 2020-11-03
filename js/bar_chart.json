@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": "container",
+  "height": 250,
+  "data": {
+    "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/deaths_by_age_group.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Age Group"},
+    "y": {
+      "field": "Percentage",
+      "type": "quantitative",
+      "title": "Number of Deaths",
+      "axis": false
+    }
+  },
+  "config": {}
+}
