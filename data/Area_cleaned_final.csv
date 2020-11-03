@@ -1,0 +1,61 @@
+Entity,Date,Count
+Africa,01/01/2020,0
+Africa,01/02/2020,0
+Africa,01/03/2020,1
+Africa,01/04/2020,691
+Africa,01/05/2020,2290
+Africa,01/06/2020,5671
+Africa,01/07/2020,12768
+Africa,01/08/2020,23590
+Africa,01/09/2020,32118
+Africa,1/10/2020,37891
+Asia,01/01/2020,1
+Asia,01/02/2020,1018
+Asia,01/03/2020,3534
+Asia,01/04/2020,10190
+Asia,01/05/2020,22175
+Asia,01/06/2020,37181
+Asia,01/07/2020,67795
+Asia,01/08/2020,111283
+Asia,01/09/2020,159375
+Asia,1/10/2020,212015
+Europe,01/01/2020,0
+Europe,01/02/2020,0
+Europe,01/03/2020,718
+Europe,01/04/2020,72560
+Europe,01/05/2020,152379
+Europe,01/06/2020,178603
+Europe,01/07/2020,191755
+Europe,01/08/2020,201141
+Europe,01/09/2020,211870
+Europe,1/10/2020,230711
+North America,01/01/2020,0
+North America,01/02/2020,0
+North America,01/03/2020,30
+North America,01/04/2020,19917
+North America,01/05/2020,88935
+North America,01/06/2020,138304
+North America,01/07/2020,181489
+North America,01/08/2020,233751
+North America,01/09/2020,282188
+North America,1/10/2020,321793
+Oceania,01/01/2020,0
+Oceania,01/02/2020,0
+Oceania,01/03/2020,3
+Oceania,01/04/2020,64
+Oceania,01/05/2020,125
+Oceania,01/06/2020,131
+Oceania,01/07/2020,135
+Oceania,01/08/2020,346
+Oceania,01/09/2020,843
+Oceania,1/10/2020,1003
+South America,01/01/2020,0
+South America,01/02/2020,0
+South America,01/03/2020,1
+South America,01/04/2020,1798
+South America,01/05/2020,16382
+South America,01/06/2020,54529
+South America,01/07/2020,102204
+South America,01/08/2020,160993
+South America,01/09/2020,223709
+South America,1/10/2020,270429
