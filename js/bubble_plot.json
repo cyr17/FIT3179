@@ -1,3 +1,4 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 550,
@@ -44,14 +45,14 @@
     {"filter": "Region_selection == null || datum.Continent==Region_selection"}
   ],
   "encoding": {
-    "y": {
+    "x": {
       "field": "Cases",
       "type": "quantitative",
       "title": "Confirmed Cases",
       "axis": {"tickCount": 7},
       "scale": {"type": "log", "domain": [1, 10000000]}
     },
-    "x": {
+    "y": {
       "field": "Deaths",
       "type": "quantitative",
       "axis": {"tickCount": 6},
@@ -103,9 +104,10 @@
     {
       "mark": {
         "type": "text",
-        "align": "left",
+        "align": "right",
         "baseline": "line-top",
-        "dx": 12,
+        "dx": -10,
+        "dy":-10,
         "fontSize": 10
       },
       "encoding": {
