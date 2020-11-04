@@ -1,19 +1,47 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": "container",
+  "width": 500,
   "height": 250,
+  "title":"Death probability per age Group",
   "data": {
-    "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/deaths_by_age_group.csv"
+    "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/deaths_by_age_group_new.csv"
   },
-  "mark": "bar",
   "encoding": {
-    "x": {"field": "Age Group"},
-    "y": {
+    "y": {"field": "Age Group","sort": "descending","title":null},
+    "x": {
       "field": "Percentage",
+      
       "type": "quantitative",
-      "title": "Number of Deaths",
-      "axis": false
+      "axis":null
+      
     }
   },
-  "config": {}
+   "layer":[
+    {
+   "mark": {"type":"bar","cornerRadiusEnd":6},
+   "encoding": {
+    "color":{
+      "field":"Age Group",
+      "scale":{"range": ["#4292c6"]},
+      "legend":null
+      },
+    "tooltip":[
+      {"field":"Age Group","type": "nominal"},
+      {"field":"Percentage","format":"0.3"},
+       {"field":"Count"}
+              ]
+    }
+    },
+    {
+  
+  "mark": {
+            "type": "text",
+            "align": "left",
+            "dx":5,
+            "baseline": "middle"
+            
+          },
+          "encoding": {"text": {"field": "Percentage"}}
+    }],
+  "config": {"view": {"stroke": null}, "axis": {"grid": false}}
 }
