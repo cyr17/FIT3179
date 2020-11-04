@@ -1,0 +1,207 @@
+LOCATION,Cases,Deaths,Death rate,Recovered,Continent
+United States,4992048,160292,0.0321,2698545,North America
+Brazil,2968605,99732,0.0336,2281074,South America
+India,2086864,42578,0.0204,1427669,Asia
+Russia,877135,14725,0.0168,683592,Asia
+South Africa,545476,9909,0.0182,394759,Africa
+Mexico,519189,54327,0.1046,296694,North America
+Peru,463875,20649,0.0445,314332,South America
+Chile,368825,9958,0.027,342168,South America
+Colombia,367196,12250,0.0334,198495,South America
+Iran,322567,18132,0.0562,279724,Asia
+Spain,314362,28503,0.0907,150376,Europe
+United Kingdom,309005,46511,0.1505,205321,Europe
+Saudi Arabia,285793,3093,0.0108,248948,Asia
+Pakistan,283239,6064,0.0214,258099,Asia
+Bangladesh,252502,3333,0.0132,145584,Asia
+Italy,249756,35190,0.1409,201642,Europe
+Turkey,238450,5813,0.0244,221574,Europe
+Argentina,235677,4411,0.0187,103297,South America
+Germany,216315,9254,0.0428,196786,Europe
+France,197921,30324,0.1532,85836,Europe
+Iraq,144064,5236,0.0363,103197,Europe
+Indonesia,121226,5593,0.0461,77577,Asia
+Philippines,119980,2150,0.0179,66837,Asia
+Canada,118984,8970,0.0754,103433,North America
+Qatar,112383,180,0.0016,109142,Asia
+Kazakhstan,96922,1058,0.0109,70680,Asia
+Egypt,95147,4971,0.0522,50553,Africa
+Ecuador,91969,5897,0.0641,59344,Europe
+China,89061,4634,0.052,80978,Asia
+Bolivia,87891,3524,0.0401,28139,South America
+Sweden,82323,5766,0.07,N/A,Europe
+Oman,81067,502,0.0062,72263,Asia
+Israel,80991,581,0.0072,55313,Europe
+Ukraine,78261,1852,0.0237,43055,Europe
+Dominican Republic,77709,1259,0.0162,41393,Europe
+Belgium,72016,9861,0.1369,17893,Europe
+Panama,72560,1591,0.0219,46675,Africa
+Kuwait,70727,471,0.0067,62330,Asia
+Belarus,68614,583,0.0085,64200,Europe
+United Arab Emirates,62061,356,0.0057,56015,Asia
+Romania,59273,2616,0.0441,35186,Europe
+Netherlands,57501,6154,0.107,35092,Europe
+Guatemala,55270,2168,0.0392,43135,Africa
+Singapore,54797,27,0.0005,48312,Asia
+Portugal,52351,1746,0.0334,38087,Europe
+Poland,50324,1787,0.0355,35642,Europe
+Honduras,46365,1465,0.0316,6355,Europe
+Japan,45899,1042,0.0227,30153,Asia
+Nigeria,45687,936,0.0205,32637,Africa
+Bahrain,43307,159,0.0037,40276,Asia
+Ghana,40097,206,0.0051,36638,Africa
+Armenia,39985,777,0.0194,32008,Europe
+Kyrgyzstan,38659,1447,0.0374,30099,Asia
+Afghanistan,36937,1298,0.0351,25840,Asia
+Switzerland,36180,1986,0.0549,15900,Europe
+Azerbaijan,30858,430,0.0139,9026,Africa
+Morocco,29644,449,0.0151,20553,Africa
+Moldova,26990,835,0.0309,18918,Africa
+Algeria,26159,1136,0.0434,9202,Africa
+Ireland,25869,1764,0.0682,N/A,Europe
+Kenya,25138,413,0.0164,11118,Asia
+Venezuela,23280,202,0.0087,12470,Europe
+Serbia,23263,526,0.0226,870,Europe
+Austria,20349,712,0.035,16371,Europe
+Uzbekistan,20226,112,0.0055,6584,Asia
+Australia,20082,266,0.0132,10957,Oceania
+Nepal,18483,45,0.0024,1,Asia
+Cameroon,16708,385,0.023,10100,Africa
+Ivory Coast,15494,94,0.0061,3722,Africa
+Czech Republic,15212,368,0.0242,7682,Europe
+El Salvador,14221,390,0.0274,3557,South America
+South Korea,14150,298,0.0211,11317,Asia
+Costa Rica,13669,87,0.0064,1280,Europe
+Denmark,13438,613,0.0456,4489,Europe
+Ethiopia,13248,209,0.0158,16,Europe
+Palestine,12795,78,0.0061,69,Europe
+Sudan,11385,717,0.063,3,Africa
+Bulgaria,10312,338,0.0328,2457,Europe
+Bosnia,10069,283,0.0281,2338,Europe
+North Macedonia,9934,460,0.0463,2316,Europe
+Senegal,9552,187,0.0196,4255,Africa
+Norway,9085,255,0.0281,N/A,Europe
+Malaysia,8884,123,0.0138,8461,Asia
+Madagascar,8866,78,0.0088,33,Africa
+DR Congo,8766,200,0.0228,985,Africa
+Finland,7388,329,0.0445,2000,Europe
+Haiti,7260,156,0.0215,709,Asia
+Tajikistan,7150,59,0.0083,4448,Asia
+Gabon,6984,49,0.007,7,Africa
+Guinea,6927,46,0.0066,4215,Africa
+Kosovo,6874,159,0.0231,1047,Africa
+Paraguay,6375,66,0.0104,4974,Europe
+Luxembourg,6189,112,0.0181,952,Europe
+Mauritania,6116,156,0.0255,2,Africa
+Lebanon,5951,70,0.0118,2042,Europe
+Greece,5123,210,0.041,269,Europe
+Djibouti,5039,58,0.0115,4269,Africa
+Croatia,4792,133,0.0278,2152,Europe
+Albania,4637,134,0.0289,1384,Africa
+Central African Republic,4598,59,0.0128,4,Africa
+Zimbabwe,4451,102,0.0229,1345,Africa
+Hungary,4435,596,0.1344,2681,Europe
+Zambia,4328,139,0.0321,30,Africa
+Hong Kong,3939,47,0.0119,2620,Asia
+Malawi,3557,94,0.0264,N/A,Africa
+Thailand,3291,58,0.0176,3053,Asia
+Maldives,3252,15,0.0046,16,Asia
+Somalia,3227,93,0.0288,1728,Africa
+Congo Republic,3038,51,0.0168,11,Africa
+Nicaragua,3004,108,0.036,5,Africa
+Eswatini,2968,55,0.0185,1476,Asia
+Sri Lanka,2770,11,0.004,98,Asia
+Disputed territories,2706,122,0.0451,1620,Africa
+Montenegro,2569,40,0.0156,315,Asia
+Libya,2547,58,0.0228,418,Asia
+Mali,2503,123,0.0491,41,Asia
+Cuba,2478,87,0.0351,2187,North America
+Equatorial Guinea,2350,41,0.0174,4,Africa
+South Sudan,2262,45,0.0199,N/A,Africa
+Cape Verde,2258,22,0.0097,1,Europe
+Slovakia,2141,28,0.0131,1455,Europe
+Slovenia,2066,115,0.0557,120,Europe
+Estonia,2033,69,0.0339,165,Europe
+Lithuania,2001,80,0.04,1503,Europe
+Guinea-Bissau,1954,26,0.0133,3,Africa
+Iceland,1850,10,0.0054,1814,Europe
+Sierra Leone,1768,66,0.0373,0,Africa
+Rwanda,1752,5,0.0029,80,Africa
+Benin,1694,34,0.0201,306,Europe
+Namibia,1687,7,0.0041,3,Africa
+Yemen,1678,475,0.2831,537,Africa
+Mozambique,1616,11,0.0068,2,Africa
+New Zealand,1556,22,0.0141,1490,Oceania
+Tunisia,1443,50,0.0347,1023,Europe
+Jordan,1310,11,0.0084,269,Europe
+Suriname,1305,23,0.0176,191,Europe
+Latvia,1206,31,0.0257,932,Europe
+Uruguay,1166,34,0.0292,818,South America
+Liberia,1135,71,0.0626,4,Europe
+Georgia,1131,16,0.0141,785,Europe
+Niger,1124,69,0.0614,924,Africa
+Uganda,1103,1,0.0009,20,Africa
+Charles de Gaulle ship,1081,0,0,0,Europe
+Burkina Faso,1081,53,0.049,835,Africa
+Cyprus,1053,19,0.018,86,Europe
+Malta,995,9,0.009,675,Africa
+Angola,916,39,0.0426,2,Africa
+Chad,915,75,0.082,8,Africa
+Andorra,897,52,0.058,799,Africa
+São Tomé and Príncipe,862,14,0.0162,N/A,Africa
+Togo,853,17,0.0199,48,Africa
+Jamaica,831,10,0.012,565,Europe
+Vietnam,789,10,0.0127,395,Asia
+San Marino,716,42,0.0587,632,Europe
+Diamond Princess,712,13,0.0183,659,Europe
+Botswana,686,1,0.0015,N/A,Europe
+Syria,627,36,0.0574,5,Africa
+Tanzania,509,21,0.0413,183,Africa
+Taiwan,449,7,0.0156,438,Asia
+Guyana,352,20,0.0568,9,Africa
+Myanmar,349,6,0.0172,5,Asia
+Burundi,345,1,0.0029,4,Asia
+Mauritius,344,10,0.0291,324,Europe
+Isle of Man,336,24,0.0714,312,Europe
+Jersey,332,31,0.0934,303,North America
+Bahamas,316,11,0.0348,11,North America
+Mongolia,288,0,0,5,Africa
+Eritrea,263,0,0,0,Africa
+Guernsey,252,13,0.0516,73,Africa
+Cambodia,225,0,0,103,Africa
+The Gambia,216,6,0.0278,2,Africa
+Cayman Islands,203,1,0.0049,7,Europe
+Gibraltar,185,0,0,120,Africa
+Bermuda,153,9,0.0588,35,Europe
+Trinidad and Tobago,147,8,0.0544,107,Europe
+Brunei,141,3,0.0213,116,Europe
+Aruba,117,3,0.0256,51,Africa
+Northern Cyprus,108,4,0.037,81,Europe
+Barbados,108,7,0.0648,15,Europe
+Seychelles,107,0,0,5,Asia
+Monaco,99,1,0.0101,20,Europe
+Sint Maarten,94,15,0.1596,12,Africa
+Bhutan,93,0,0,2,Asia
+Turks and Caicos Islands,92,2,0.0217,0,Europe
+Liechtenstein,87,1,0.0115,55,Europe
+Antigua and Barbuda,82,3,0.0366,3,Africa
+French Polynesia,62,0,0,N/A,Africa
+Saint Vincent and the Grenadines,52,0,0,1,Africa
+Belize,48,2,0.0417,16,Africa
+Macau,45,0,0,16,Africa
+Papua New Guinea,62,0,0,8,Oceania
+Curaçao,29,1,0.0345,10,Europe
+Fiji,27,0,0,0,Asia
+Timor-Leste,24,0,0,1,Africa
+Saint Lucia,24,0,0,11,Africa
+Grenada,23,0,0,0,Europe
+New Caledonia,22,0,0,18,Africa
+Laos,20,0,0,2,Africa
+St. Kitts and Nevis,17,0,0,0,Africa
+Falkland Islands,13,0,0,13,Europe
+Greenland,13,0,0,11,Europe
+Montserrat,13,1,0.0769,2,Europe
+Vatican City,12,0,0,2,Europe
+British Virgin Islands,8,1,0.125,3,Europe
+St. Barthélemy,7,0,0,4,Africa
+Anguilla,3,0,0,3,Africa
