@@ -62,7 +62,7 @@
         "type": "text",
         "align": "center",
         "baseline": "top",
-        "dx": -140,
+        "dx": -120,
         "dy": -80,
         "width": 100,
         "text":"USA"
@@ -77,7 +77,7 @@
         "type": "text",
         "align": "center",
         "baseline": "top",
-        "dx": 155,
+        "dx": 135,
         "dy": -10,
         "width": 100,
         "text":"India"
@@ -92,7 +92,7 @@
         "type": "text",
         "align": "center",
         "baseline": "top",
-        "dx": -195,
+        "dx": -175,
         "dy": 40,
         "width": 100,
         "text":"Peru"
