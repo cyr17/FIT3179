@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 600,
-  "height": 300,
+  "width": 750,
+  "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/Area_cleaned.csv"
   },
@@ -59,7 +59,7 @@
     },
     "opacity": {
       "condition": {"selection": "highlight", "value": 1},
-      "value": 0.27
+      "value": 0.11
     },
     "order": {"field": "Entity"},
     "tooltip": 
