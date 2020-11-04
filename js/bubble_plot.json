@@ -1,8 +1,8 @@
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 550,
-  "height": 400,
+  "width": 700,
+  "height": 450,
   "title": "Covid 19 Death Rate by Country as of August 2020 ",
   "data": {
     "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/bubble_cleaned_new.csv"
