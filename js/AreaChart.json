@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 700,
-  "height": 500,
+  "height": 450,
+  "title":"Confirmed case contribution by continent",
   "data": {
     "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/Area_cleaned.csv"
   },
