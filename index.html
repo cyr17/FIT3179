@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>FIT3179: Homework Week 10</title>
+  <title>FIT3179- Assignment 2</title>
   <!-- Import Vega & Vega-Lite -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
@@ -16,7 +17,7 @@
   <!-- custom CSS -->
   <style>
     *{
-      font-family: 'Arial', sans-serif;
+      font-family: 'Trebuchet MS', sans-serif;
     }
     h1{
       font-weight: 800;
@@ -25,7 +26,7 @@
        background-color: grey;
      }
      .page{
-       width: 1155px;    
+       width: 1150px;    
        background-color: white;   
        margin: auto;
        padding: 50px;
@@ -55,62 +56,158 @@
       font-weight: 300;
     }
   </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
+<header>    
+    </header>
  <div class="page">
 
-   <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <h1 style ="color:darkblue;">Home Work 10 Visualisation</h1>
-        <p>This web page visualizes the data on population in 2020. </p>
-      </div>
-    </div>
+    <h1>Raising Awareness against COVID-19</h1>
+    <br>
+
   <!-- end pure grid group -->
-
+  <h2> World-Wide Impact</h2>
     <!-- pure grid group -->
     <div class="pure-g">
         <div class="pure-u-1-4">
           <div class="description description-left">
-            <h2> Density world Map</h2>
-            <p> This world map visualizes the countries based on their density variations. A chloropeth map is used for this visualization as the population data is already normalized under the property density which gives a ratio of population to land area of a particular country.</p>
-          </div>
-        </div>
-        <div class="pure-u-3-4">
-          <div id="vis1" class="vis-container"></div>
-        </div>
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-        <div class="pure-u-1-4">
-          <div class="description description-left">
-            <h2>Countries with promising future</h2>
-            <p>The bubble plot visualizes the distribution of urban population , and median age of countries which signifies the developement and youthfulness implying to a promising future.
+            
+            <p> This visualization is used to raise awareness against the pandemic and is made with the help
+              of a chloropeth map which uses the confirmed cases per million people. This helps to see the 
+              efforts and measures taken by some country to reduce the spread to their population , which 
+              wouldnt have been noted if only the number of affected people were taken into account.It is seen 
+              that India and China evennthough having the most population are having a low cases/million ratio
+              which shows thaeir efficiency in trying to reduse the spread.It is also worth mentioning that the 
+              countries like USA,Kuwait and all the South American countries have been severly affected by Covid-19
+              as most of their population is affected by the virus.The data used for this visualization was last 
+              updated on 30/10/2020.
             </p>
           </div>
         </div>
         <div class="pure-u-3-4">
-          <div id="vis2" class="vis-container"></div>
+          <div id="vis1" class="vis-container" style="padding-top: 14px;"></div>
         </div>
     </div>
+    <!-- end pure grid group -->
+    <br>
+    <h2>Life expectancy between Age Groups</h2>
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-4">
+          <div class="description description-left">
+            <p>This graph visualizes the distribution of death rates in the United States of America from the data available on a total of 7,000,000 infected people.
+              It is seen that children and teenagers developed a better immuntiy to the virus as most of them recovered, where as people above the age of 85+ are more prone to death so they should be taken care of with extra precautions.
+In general, the more the age of the patient, the more He/She is prone to death.Thus , people above 50 years of age should be taken care of with extra precautions , reducing their contact with others as they belong to a high risk category.
+              
+          </p>
+          </div>
+        </div>
+        <div class="pure-u-3-4">
+          <div id="vis2" class="vis-container" style="padding-top: 14px;"></div>
+        </div>
+
+    </div>
+
+    
+    <!-- end pure grid group -->
+    <br>
+    <h2>Patterns on Gender and Age Groups</h2>
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-4">
+          <div class="description description-left">
+           <p>This visualisation provides the patterns noticed in the spread of covid-19 to different age groups and genders in the United States of America.
+                It can be observed from the chart that people between 40-49 years and 60-69 years old have the highest risk of being infected by the virus.
+             It can also be noted that females have a slightly increased chance of being infected than males but the risk of being affected are closely similar. 
+             </p>
+          </div>
+        </div>
+        <div class="pure-u-3-4">
+          <div id="vis4" class="vis-container" style="padding-top: 14px;"></div>
+        </div>
+    </div>
+    <br>
+    
+    
+    <!-- end pure grid group -->
+    <h2>Contribution by Region/Continents</h2>
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-4">
+          <div class="description description-left">
+           <p>
+               This area chart is used to visualize the contribution of different continents to the total number of confirmed cases in the world. It can be seen that most of the continents marked their uncontrollable spread during the end of May. The highest contribution to the confirmed cases is by North America and South America in the respective order even though the virus initially originated in Asia.
+Asia had been reporting cases from the start of the year and the delay in the spread in different continents can be identified by the relative the distance between the continents from Asia.
+It is also worth mentioning that Oceania have been most effective in reducing cases as they are mostly comprised of island countries.
+
+           </p>
+          </div>
+        </div>
+        <div class="pure-u-3-4">
+          <div id="vis6" class="vis-container" style="padding-top: 14px;"></div>
+        </div>
+    </div>
+<br>
+    <h2> Death Rates by Country</h2>
+       
+    <div class="pure-g">
+        <div class="pure-u-1-4">
+          <div class="description description-left">
+            <p> This chart visualizes the relation between the confirmed cases and the number of deaths for each country.The countries are represented by circles whose size represents the recovered cases of that country.
+              It is seen that most of the countries are belove the general slope of the graph ,which is a good sign as their death rates are comparatively smaller than the average death rate for their confirmed cases as countries with higher population will tend to have higher deaths and recovery numbers.The countries are categorized by regions and it is seen that there is no particular patterns to be observed from this category and it depends on the population of the country
+              
+              
+            </p>
+          </div>
+        </div>
+        <div class="pure-u-3-4">
+          <div id="vis7" class="vis-container" style="padding-top: 14px;"></div>
+        </div>
+    </div>
+    <!-- end pure grid group -->
+    <br>
+    <br>
+    <br>
+    <br> 
+    <br>
+    <br> 
+    <hr>
+    <h3> Created by Cyril Chacko .</h3>
     </div>
   
   
-
   </div> <!-- end page -->
    
 <script type="text/javascript">
-  var specVis1 = "https://raw.githubusercontent.com/cyr17/FIT3179/main/js/map_plot.json";
-  var specVis2 = "https://raw.githubusercontent.com/cyr17/FIT3179/main/js/bubble_plot.json";
+  var choroplethVis = "https://raw.githubusercontent.com/cyr17/FIT3179/main/js/map_plot.json";
+  var bubbleVis = "https://raw.githubusercontent.com/cyr17/FIT3179/main/js/bubble_plot.json";
+ 
+  var treemapVis = "https://raw.githubusercontent.com/cyr17/FIT3179/main/js/bar_chart.json";
 
-  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+  var areaVis = "https://raw.githubusercontent.com/cyr17/FIT3179/main/js/AreaChart.json";
+  var pyramidVis = "https://raw.githubusercontent.com/cyr17/FIT3179/main/js/Age_struct_pyramid.json";
+ 
+
+  vegaEmbed('#vis1', choroplethVis, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+   vegaEmbed('#vis7', bubbleVis, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+   vegaEmbed('#vis2', treemapVis, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+ 
+  
+  vegaEmbed('#vis4', pyramidVis, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+   vegaEmbed('#vis6', areaVis, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
