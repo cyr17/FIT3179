@@ -4,54 +4,55 @@
   "height": 400,
   "title": "COVID-19 Cases per Country",
   "data": {
-    "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/data_final.csv"
+    "url": "https://raw.githubusercontent.com/cyr17/FIT3179/main/data/bubble_cleaned_new.csv"
   },
   "params": [
     {
-      "name": "Confirmed_Above",
+      "name": "Recovered_Above",
       "value": 0,
       "bind": {
         "input": "range",
         "min": 0,
         "max": 1000000,
         "step": 1000,
-        "name": "Minimum Confirmed: "
+        "name": "Recovered: "
       }
     },
     {
       "name": "Region_selection",
       "bind": {
         "input": "select",
-        "options": [null, "Americas", "Europe", "Africa", "Asia", "Oceania"],
+        "options": [null, "North America","South America", "Europe", "Africa", "Asia", "Oceania"],
         "labels": [
           "Show All",
-          "Americas",
+          "North America",
+          "South America",
           "Europe",
           "Africa",
           "Asia",
           "Oceania"
         ],
-        "name": "Region Selection: "
+        "name": "Continent: "
       }
     }
   ],
   "transform": [
-    {"filter": "datum.Confirmed > 0"},
-    {"filter": "datum.Death > 0"},
+    {"filter": "datum.Cases > 0"},
+    {"filter": "datum.Deaths > 0"},
     {"filter": "datum.Recovered > 0"},
-    {"filter": "datum.Confirmed > Confirmed_Above"},
-    {"filter": "Region_selection == null || datum.Region==Region_selection"}
+    {"filter": "datum.Recovered > Recovered_Above"},
+    {"filter": "Region_selection == null || datum.Continent==Region_selection"}
   ],
   "encoding": {
-    "x": {
-      "field": "Recovered",
+    "y": {
+      "field": "Cases",
       "type": "quantitative",
-      "title": "Recovered Cases",
+      "title": "Confirmed Cases",
       "axis": {"tickCount": 7},
       "scale": {"type": "log", "domain": [1, 10000000]}
     },
-    "y": {
-      "field": "Death",
+    "x": {
+      "field": "Deaths",
       "type": "quantitative",
       "axis": {"tickCount": 6},
       "scale": {"type": "log", "domain": [1, 1000000]}
@@ -62,14 +63,14 @@
       "selection": {
         "region_highlight": {
           "type": "multi",
-          "fields": ["Region"],
+          "fields": ["Continent"],
           "bind": "legend"
         }
       },
       "mark": "circle",
       "encoding": {
         "size": {
-          "field": "Confirmed",
+          "field": "Recovered",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
@@ -79,11 +80,11 @@
           "legend": {"format": ".1s"}
         },
         "color": {
-          "field": "Region",
+          "field": "Continent",
           "type": "nominal",
           "scale": {
-            "domain": ["Americas", "Europe", "Africa", "Asia", "Oceania"],
-            "range": ["#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628"]
+            "range":["#c7e9b4","#feb24c","#fa9fb5","#08519c","#2ca25f","#252525"],
+      "domain":["North America","South America", "Europe", "Africa", "Asia","Oceania"]
           }
         },
         "opacity": {
@@ -91,10 +92,10 @@
           "value": 0.2
         },
         "tooltip": [
-          {"field": "Country/Region", "type": "nominal"},
-          {"field": "Confirmed", "type": "quantitative", "format": ","},
-          {"field": "Active", "type": "quantitative", "format": ","},
-          {"field": "Death", "type": "quantitative", "format": ","},
+          {"field": "LOCATION", "type": "nominal"},
+          {"field": "Cases", "type": "quantitative", "format": ","},
+          {"field": "Death rate", "type": "quantitative", "format": ","},
+          {"field": "Deaths", "type": "quantitative", "format": ","},
           {"field": "Recovered", "type": "quantitative", "format": ","}
         ]
       }
@@ -103,29 +104,29 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "baseline": "line-bottom",
+        "baseline": "line-top",
         "dx": 12,
         "fontSize": 10
       },
       "encoding": {
-        "text": {"field": "Country/Region", "type": "nominal"},
+        "text": {"field": "LOCATION", "type": "nominal"},
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['Country/Region'] == 'US' || datum['Country/Region'] == 'India'||datum['Country/Region'] == 'Brazil'",
+            "test": "datum['LOCATION'] == 'United States' || datum['LOCATION'] == 'India'||datum['LOCATION'] == 'Brazil'",
             "value": 1
           },
           "value": 0
         },
         "tooltip": [
-          {"field": "Country/Region", "type": "nominal"},
-          {"field": "Confirmed", "type": "quantitative", "format": ","},
-          {"field": "Active", "type": "quantitative", "format": ","},
-          {"field": "Death", "type": "quantitative", "format": ","},
+          {"field": "LOCATION", "type": "nominal"},
+          {"field": "Cases", "type": "quantitative", "format": ","},
+          {"field": "Death rate", "type": "quantitative", "format": ","},
+          {"field": "Deaths", "type": "quantitative", "format": ","},
           {"field": "Recovered", "type": "quantitative", "format": ","}
         ]
       }
     }
   ],
-  "config": {}
+  "config": {"view": {"stroke": null}, "axis": {"grid": false}}
 }
