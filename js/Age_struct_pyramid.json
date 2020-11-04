@@ -13,8 +13,8 @@
     }
   ],
   "title": "Age-Sex Structure for confirmed cases",
-  "width": 500,
-  "height": 300,
+  "width": 700,
+  "height": 450,
    "encoding": {
     "y": {"field": "Group", "sort": "descending","title":null},
     "x": {
